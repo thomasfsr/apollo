@@ -1,0 +1,21 @@
+artifact_path: knn_distance_cosine_k_6
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.0
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+mlflow_version: 2.21.0
+model_size_bytes: 341
+model_uuid: 991425aa986042d29533e9cc00e982a7
+prompts: null
+run_id: 8581f73ca9144a93a809bc0e09289a59
+utc_time_created: '2025-03-17 04:44:27.318975'

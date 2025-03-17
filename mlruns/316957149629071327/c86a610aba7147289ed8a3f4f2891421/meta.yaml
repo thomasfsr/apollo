@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Priscila/workspace/apollo/mlruns/316957149629071327/c86a610aba7147289ed8a3f4f2891421/artifacts
+end_time: 1742186728005
+entry_point_name: ''
+experiment_id: '316957149629071327'
+lifecycle_stage: active
+run_id: c86a610aba7147289ed8a3f4f2891421
+run_name: bustling-wren-326
+run_uuid: c86a610aba7147289ed8a3f4f2891421
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742186712440
+status: 3
+tags: []
+user_id: Priscila

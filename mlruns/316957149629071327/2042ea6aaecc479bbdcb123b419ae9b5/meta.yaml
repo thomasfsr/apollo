@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Priscila/workspace/apollo/mlruns/316957149629071327/2042ea6aaecc479bbdcb123b419ae9b5/artifacts
+end_time: 1742186687738
+entry_point_name: ''
+experiment_id: '316957149629071327'
+lifecycle_stage: active
+run_id: 2042ea6aaecc479bbdcb123b419ae9b5
+run_name: painted-hog-295
+run_uuid: 2042ea6aaecc479bbdcb123b419ae9b5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742186674446
+status: 3
+tags: []
+user_id: Priscila

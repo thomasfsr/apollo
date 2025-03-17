@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Priscila/workspace/apollo/mlruns/316957149629071327/cdf3cbe8849d406ebdd5193df8269d9a/artifacts
+end_time: 1742186574273
+entry_point_name: ''
+experiment_id: '316957149629071327'
+lifecycle_stage: active
+run_id: cdf3cbe8849d406ebdd5193df8269d9a
+run_name: ambitious-perch-846
+run_uuid: cdf3cbe8849d406ebdd5193df8269d9a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742186552025
+status: 3
+tags: []
+user_id: Priscila

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Priscila/workspace/apollo/mlruns/316957149629071327/f8fb184d3cda4bfb854f5c2516edf8d5/artifacts
+end_time: 1742186696595
+entry_point_name: ''
+experiment_id: '316957149629071327'
+lifecycle_stage: active
+run_id: f8fb184d3cda4bfb854f5c2516edf8d5
+run_name: overjoyed-stoat-858
+run_uuid: f8fb184d3cda4bfb854f5c2516edf8d5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742186687748
+status: 3
+tags: []
+user_id: Priscila

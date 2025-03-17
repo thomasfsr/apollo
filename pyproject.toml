@@ -7,11 +7,15 @@ requires-python = ">=3.13"
 dependencies = [
     "ipykernel>=6.29.5",
     "matplotlib>=3.10.1",
+    "mlflow>=2.21.0",
     "numpy>=2.2.3",
     "pandas>=2.2.3",
     "scikit-learn>=1.6.1",
     "seaborn>=0.13.2",
+    "streamlit>=1.43.2",
     "taskipy>=1.14.1",
 ]
 [tool.taskipy.tasks]
 etl = "python -m src.etl"
+train = "python -m src.train_model"
+mlf = "mlflow ui"
