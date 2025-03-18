@@ -113,18 +113,15 @@ Let us see the result of the different combinations.
 
 st.dataframe(results)
 
-st.markdown(
-    '''
-    The best model was the k=13 and cosine distance, achieving:
-    Overall:
-    f1-score: 0.786, top 1-k accurancy: 0.805 and ROC AUC: 0.966.
-    As expected, the Cosine Distance and bigger K performed better.  
-    The model was trained with 80 percent of the data stratified by the
-    syndrome label to achieve higher accurancy with the small classes. 
-     The remaining data for final test will be used to validate the model
-     and to help us visualize the ROC curve for each syndrome.  
-    ''')
-
+st.markdown("""
+The best model was with k=13 and cosine distance, achieving the following performance metrics:  
+Overall:  
+F1-score: 0.786  
+Top 1-k accuracy: 0.805  
+ROC AUC: 0.966  
+As expected, the Cosine Distance and higher k performed better. The model was trained with 80 percent of the data, stratified by the syndrome label to achieve higher accuracy for the smaller classes. The remaining data will be used for final testing, validating the model and helping us visualize the ROC curve for each syndrome.  
+""")
+st.image('image/mlflow.png', width=1500)
 encoded_y_train = pd.get_dummies(y_train)
 encoded_y_test = pd.get_dummies(y_test)
 
