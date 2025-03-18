@@ -186,3 +186,18 @@ sns.barplot(
     dodge=False,
     ax=ax
 )
+st.subheader("Conclusion")
+st.markdown(
+    '''
+    To conclude, since the embedding probably was extracted
+    using CNN pre-trained model such as RESNET, the semantic
+    information in the vectors helped to improve the model using
+    cosine distance to achieve acceptable results.
+
+    What can be further exploring is to try out 
+    a pre-trained model with a output layer for classification task.
+      
+    Moreover, there are other types of classifiers that are also
+    robust against high-dimensionality such as LightGBM and XGBoost.  
+    '''
+)
