@@ -70,6 +70,6 @@ This project focuses on analyzing medical image data to predict syndromes using 
 - **Normality Testing:** Shapiro-Wilk tests to check embedding normality.  
 - **Dimensionality Reduction:** T-SNE for 2D visualization of embeddings.  
 - **KNN Classification:** Hyperparameter optimization (distance metrics, k-values) for syndrome prediction.  
-- **Performance Evaluation:** ROC curves, AUC scores, and per-syndrome analysis.  
+- **Performance Evaluation:** ROC curves, AUC scores, F1-Score and per-syndrome analysis.  
   
 
