@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1742227957257
+current_stage: None
+description: null
+last_updated_timestamp: 1742227957257
+name: knn_distance_cosine_k_13
+run_id: 58ed1fe0ea3e4a83a89fce130217af11
+run_link: null
+source: file:///C:/Users/Priscila/workspace/apollo/mlruns/815447596395846916/58ed1fe0ea3e4a83a89fce130217af11/artifacts/knn_distance_cosine_k_13
+status: READY
+status_message: null
+storage_location: file:///C:/Users/Priscila/workspace/apollo/mlruns/815447596395846916/58ed1fe0ea3e4a83a89fce130217af11/artifacts/knn_distance_cosine_k_13
+user_id: null
+version: 1

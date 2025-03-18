@@ -1,0 +1,240 @@
+artifact_path: knn_distance_cosine_k_15
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.0
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+is_signature_from_type_hint: false
+mlflow_version: 2.21.0
+model_size_bytes: 341
+model_uuid: be86cced81824007bc51f0de71176e53
+prompts: null
+run_id: e1e8b1925ba34c8eb863b736df2056a4
+signature:
+  inputs: '[{"type": "double", "name": "d_1", "required": true}, {"type": "double",
+    "name": "d_2", "required": true}, {"type": "double", "name": "d_3", "required":
+    true}, {"type": "double", "name": "d_4", "required": true}, {"type": "double",
+    "name": "d_5", "required": true}, {"type": "double", "name": "d_6", "required":
+    true}, {"type": "double", "name": "d_7", "required": true}, {"type": "double",
+    "name": "d_8", "required": true}, {"type": "double", "name": "d_9", "required":
+    true}, {"type": "double", "name": "d_10", "required": true}, {"type": "double",
+    "name": "d_11", "required": true}, {"type": "double", "name": "d_12", "required":
+    true}, {"type": "double", "name": "d_13", "required": true}, {"type": "double",
+    "name": "d_14", "required": true}, {"type": "double", "name": "d_15", "required":
+    true}, {"type": "double", "name": "d_16", "required": true}, {"type": "double",
+    "name": "d_17", "required": true}, {"type": "double", "name": "d_18", "required":
+    true}, {"type": "double", "name": "d_19", "required": true}, {"type": "double",
+    "name": "d_20", "required": true}, {"type": "double", "name": "d_21", "required":
+    true}, {"type": "double", "name": "d_22", "required": true}, {"type": "double",
+    "name": "d_23", "required": true}, {"type": "double", "name": "d_24", "required":
+    true}, {"type": "double", "name": "d_25", "required": true}, {"type": "double",
+    "name": "d_26", "required": true}, {"type": "double", "name": "d_27", "required":
+    true}, {"type": "double", "name": "d_28", "required": true}, {"type": "double",
+    "name": "d_29", "required": true}, {"type": "double", "name": "d_30", "required":
+    true}, {"type": "double", "name": "d_31", "required": true}, {"type": "double",
+    "name": "d_32", "required": true}, {"type": "double", "name": "d_33", "required":
+    true}, {"type": "double", "name": "d_34", "required": true}, {"type": "double",
+    "name": "d_35", "required": true}, {"type": "double", "name": "d_36", "required":
+    true}, {"type": "double", "name": "d_37", "required": true}, {"type": "double",
+    "name": "d_38", "required": true}, {"type": "double", "name": "d_39", "required":
+    true}, {"type": "double", "name": "d_40", "required": true}, {"type": "double",
+    "name": "d_41", "required": true}, {"type": "double", "name": "d_42", "required":
+    true}, {"type": "double", "name": "d_43", "required": true}, {"type": "double",
+    "name": "d_44", "required": true}, {"type": "double", "name": "d_45", "required":
+    true}, {"type": "double", "name": "d_46", "required": true}, {"type": "double",
+    "name": "d_47", "required": true}, {"type": "double", "name": "d_48", "required":
+    true}, {"type": "double", "name": "d_49", "required": true}, {"type": "double",
+    "name": "d_50", "required": true}, {"type": "double", "name": "d_51", "required":
+    true}, {"type": "double", "name": "d_52", "required": true}, {"type": "double",
+    "name": "d_53", "required": true}, {"type": "double", "name": "d_54", "required":
+    true}, {"type": "double", "name": "d_55", "required": true}, {"type": "double",
+    "name": "d_56", "required": true}, {"type": "double", "name": "d_57", "required":
+    true}, {"type": "double", "name": "d_58", "required": true}, {"type": "double",
+    "name": "d_59", "required": true}, {"type": "double", "name": "d_60", "required":
+    true}, {"type": "double", "name": "d_61", "required": true}, {"type": "double",
+    "name": "d_62", "required": true}, {"type": "double", "name": "d_63", "required":
+    true}, {"type": "double", "name": "d_64", "required": true}, {"type": "double",
+    "name": "d_65", "required": true}, {"type": "double", "name": "d_66", "required":
+    true}, {"type": "double", "name": "d_67", "required": true}, {"type": "double",
+    "name": "d_68", "required": true}, {"type": "double", "name": "d_69", "required":
+    true}, {"type": "double", "name": "d_70", "required": true}, {"type": "double",
+    "name": "d_71", "required": true}, {"type": "double", "name": "d_72", "required":
+    true}, {"type": "double", "name": "d_73", "required": true}, {"type": "double",
+    "name": "d_74", "required": true}, {"type": "double", "name": "d_75", "required":
+    true}, {"type": "double", "name": "d_76", "required": true}, {"type": "double",
+    "name": "d_77", "required": true}, {"type": "double", "name": "d_78", "required":
+    true}, {"type": "double", "name": "d_79", "required": true}, {"type": "double",
+    "name": "d_80", "required": true}, {"type": "double", "name": "d_81", "required":
+    true}, {"type": "double", "name": "d_82", "required": true}, {"type": "double",
+    "name": "d_83", "required": true}, {"type": "double", "name": "d_84", "required":
+    true}, {"type": "double", "name": "d_85", "required": true}, {"type": "double",
+    "name": "d_86", "required": true}, {"type": "double", "name": "d_87", "required":
+    true}, {"type": "double", "name": "d_88", "required": true}, {"type": "double",
+    "name": "d_89", "required": true}, {"type": "double", "name": "d_90", "required":
+    true}, {"type": "double", "name": "d_91", "required": true}, {"type": "double",
+    "name": "d_92", "required": true}, {"type": "double", "name": "d_93", "required":
+    true}, {"type": "double", "name": "d_94", "required": true}, {"type": "double",
+    "name": "d_95", "required": true}, {"type": "double", "name": "d_96", "required":
+    true}, {"type": "double", "name": "d_97", "required": true}, {"type": "double",
+    "name": "d_98", "required": true}, {"type": "double", "name": "d_99", "required":
+    true}, {"type": "double", "name": "d_100", "required": true}, {"type": "double",
+    "name": "d_101", "required": true}, {"type": "double", "name": "d_102", "required":
+    true}, {"type": "double", "name": "d_103", "required": true}, {"type": "double",
+    "name": "d_104", "required": true}, {"type": "double", "name": "d_105", "required":
+    true}, {"type": "double", "name": "d_106", "required": true}, {"type": "double",
+    "name": "d_107", "required": true}, {"type": "double", "name": "d_108", "required":
+    true}, {"type": "double", "name": "d_109", "required": true}, {"type": "double",
+    "name": "d_110", "required": true}, {"type": "double", "name": "d_111", "required":
+    true}, {"type": "double", "name": "d_112", "required": true}, {"type": "double",
+    "name": "d_113", "required": true}, {"type": "double", "name": "d_114", "required":
+    true}, {"type": "double", "name": "d_115", "required": true}, {"type": "double",
+    "name": "d_116", "required": true}, {"type": "double", "name": "d_117", "required":
+    true}, {"type": "double", "name": "d_118", "required": true}, {"type": "double",
+    "name": "d_119", "required": true}, {"type": "double", "name": "d_120", "required":
+    true}, {"type": "double", "name": "d_121", "required": true}, {"type": "double",
+    "name": "d_122", "required": true}, {"type": "double", "name": "d_123", "required":
+    true}, {"type": "double", "name": "d_124", "required": true}, {"type": "double",
+    "name": "d_125", "required": true}, {"type": "double", "name": "d_126", "required":
+    true}, {"type": "double", "name": "d_127", "required": true}, {"type": "double",
+    "name": "d_128", "required": true}, {"type": "double", "name": "d_129", "required":
+    true}, {"type": "double", "name": "d_130", "required": true}, {"type": "double",
+    "name": "d_131", "required": true}, {"type": "double", "name": "d_132", "required":
+    true}, {"type": "double", "name": "d_133", "required": true}, {"type": "double",
+    "name": "d_134", "required": true}, {"type": "double", "name": "d_135", "required":
+    true}, {"type": "double", "name": "d_136", "required": true}, {"type": "double",
+    "name": "d_137", "required": true}, {"type": "double", "name": "d_138", "required":
+    true}, {"type": "double", "name": "d_139", "required": true}, {"type": "double",
+    "name": "d_140", "required": true}, {"type": "double", "name": "d_141", "required":
+    true}, {"type": "double", "name": "d_142", "required": true}, {"type": "double",
+    "name": "d_143", "required": true}, {"type": "double", "name": "d_144", "required":
+    true}, {"type": "double", "name": "d_145", "required": true}, {"type": "double",
+    "name": "d_146", "required": true}, {"type": "double", "name": "d_147", "required":
+    true}, {"type": "double", "name": "d_148", "required": true}, {"type": "double",
+    "name": "d_149", "required": true}, {"type": "double", "name": "d_150", "required":
+    true}, {"type": "double", "name": "d_151", "required": true}, {"type": "double",
+    "name": "d_152", "required": true}, {"type": "double", "name": "d_153", "required":
+    true}, {"type": "double", "name": "d_154", "required": true}, {"type": "double",
+    "name": "d_155", "required": true}, {"type": "double", "name": "d_156", "required":
+    true}, {"type": "double", "name": "d_157", "required": true}, {"type": "double",
+    "name": "d_158", "required": true}, {"type": "double", "name": "d_159", "required":
+    true}, {"type": "double", "name": "d_160", "required": true}, {"type": "double",
+    "name": "d_161", "required": true}, {"type": "double", "name": "d_162", "required":
+    true}, {"type": "double", "name": "d_163", "required": true}, {"type": "double",
+    "name": "d_164", "required": true}, {"type": "double", "name": "d_165", "required":
+    true}, {"type": "double", "name": "d_166", "required": true}, {"type": "double",
+    "name": "d_167", "required": true}, {"type": "double", "name": "d_168", "required":
+    true}, {"type": "double", "name": "d_169", "required": true}, {"type": "double",
+    "name": "d_170", "required": true}, {"type": "double", "name": "d_171", "required":
+    true}, {"type": "double", "name": "d_172", "required": true}, {"type": "double",
+    "name": "d_173", "required": true}, {"type": "double", "name": "d_174", "required":
+    true}, {"type": "double", "name": "d_175", "required": true}, {"type": "double",
+    "name": "d_176", "required": true}, {"type": "double", "name": "d_177", "required":
+    true}, {"type": "double", "name": "d_178", "required": true}, {"type": "double",
+    "name": "d_179", "required": true}, {"type": "double", "name": "d_180", "required":
+    true}, {"type": "double", "name": "d_181", "required": true}, {"type": "double",
+    "name": "d_182", "required": true}, {"type": "double", "name": "d_183", "required":
+    true}, {"type": "double", "name": "d_184", "required": true}, {"type": "double",
+    "name": "d_185", "required": true}, {"type": "double", "name": "d_186", "required":
+    true}, {"type": "double", "name": "d_187", "required": true}, {"type": "double",
+    "name": "d_188", "required": true}, {"type": "double", "name": "d_189", "required":
+    true}, {"type": "double", "name": "d_190", "required": true}, {"type": "double",
+    "name": "d_191", "required": true}, {"type": "double", "name": "d_192", "required":
+    true}, {"type": "double", "name": "d_193", "required": true}, {"type": "double",
+    "name": "d_194", "required": true}, {"type": "double", "name": "d_195", "required":
+    true}, {"type": "double", "name": "d_196", "required": true}, {"type": "double",
+    "name": "d_197", "required": true}, {"type": "double", "name": "d_198", "required":
+    true}, {"type": "double", "name": "d_199", "required": true}, {"type": "double",
+    "name": "d_200", "required": true}, {"type": "double", "name": "d_201", "required":
+    true}, {"type": "double", "name": "d_202", "required": true}, {"type": "double",
+    "name": "d_203", "required": true}, {"type": "double", "name": "d_204", "required":
+    true}, {"type": "double", "name": "d_205", "required": true}, {"type": "double",
+    "name": "d_206", "required": true}, {"type": "double", "name": "d_207", "required":
+    true}, {"type": "double", "name": "d_208", "required": true}, {"type": "double",
+    "name": "d_209", "required": true}, {"type": "double", "name": "d_210", "required":
+    true}, {"type": "double", "name": "d_211", "required": true}, {"type": "double",
+    "name": "d_212", "required": true}, {"type": "double", "name": "d_213", "required":
+    true}, {"type": "double", "name": "d_214", "required": true}, {"type": "double",
+    "name": "d_215", "required": true}, {"type": "double", "name": "d_216", "required":
+    true}, {"type": "double", "name": "d_217", "required": true}, {"type": "double",
+    "name": "d_218", "required": true}, {"type": "double", "name": "d_219", "required":
+    true}, {"type": "double", "name": "d_220", "required": true}, {"type": "double",
+    "name": "d_221", "required": true}, {"type": "double", "name": "d_222", "required":
+    true}, {"type": "double", "name": "d_223", "required": true}, {"type": "double",
+    "name": "d_224", "required": true}, {"type": "double", "name": "d_225", "required":
+    true}, {"type": "double", "name": "d_226", "required": true}, {"type": "double",
+    "name": "d_227", "required": true}, {"type": "double", "name": "d_228", "required":
+    true}, {"type": "double", "name": "d_229", "required": true}, {"type": "double",
+    "name": "d_230", "required": true}, {"type": "double", "name": "d_231", "required":
+    true}, {"type": "double", "name": "d_232", "required": true}, {"type": "double",
+    "name": "d_233", "required": true}, {"type": "double", "name": "d_234", "required":
+    true}, {"type": "double", "name": "d_235", "required": true}, {"type": "double",
+    "name": "d_236", "required": true}, {"type": "double", "name": "d_237", "required":
+    true}, {"type": "double", "name": "d_238", "required": true}, {"type": "double",
+    "name": "d_239", "required": true}, {"type": "double", "name": "d_240", "required":
+    true}, {"type": "double", "name": "d_241", "required": true}, {"type": "double",
+    "name": "d_242", "required": true}, {"type": "double", "name": "d_243", "required":
+    true}, {"type": "double", "name": "d_244", "required": true}, {"type": "double",
+    "name": "d_245", "required": true}, {"type": "double", "name": "d_246", "required":
+    true}, {"type": "double", "name": "d_247", "required": true}, {"type": "double",
+    "name": "d_248", "required": true}, {"type": "double", "name": "d_249", "required":
+    true}, {"type": "double", "name": "d_250", "required": true}, {"type": "double",
+    "name": "d_251", "required": true}, {"type": "double", "name": "d_252", "required":
+    true}, {"type": "double", "name": "d_253", "required": true}, {"type": "double",
+    "name": "d_254", "required": true}, {"type": "double", "name": "d_255", "required":
+    true}, {"type": "double", "name": "d_256", "required": true}, {"type": "double",
+    "name": "d_257", "required": true}, {"type": "double", "name": "d_258", "required":
+    true}, {"type": "double", "name": "d_259", "required": true}, {"type": "double",
+    "name": "d_260", "required": true}, {"type": "double", "name": "d_261", "required":
+    true}, {"type": "double", "name": "d_262", "required": true}, {"type": "double",
+    "name": "d_263", "required": true}, {"type": "double", "name": "d_264", "required":
+    true}, {"type": "double", "name": "d_265", "required": true}, {"type": "double",
+    "name": "d_266", "required": true}, {"type": "double", "name": "d_267", "required":
+    true}, {"type": "double", "name": "d_268", "required": true}, {"type": "double",
+    "name": "d_269", "required": true}, {"type": "double", "name": "d_270", "required":
+    true}, {"type": "double", "name": "d_271", "required": true}, {"type": "double",
+    "name": "d_272", "required": true}, {"type": "double", "name": "d_273", "required":
+    true}, {"type": "double", "name": "d_274", "required": true}, {"type": "double",
+    "name": "d_275", "required": true}, {"type": "double", "name": "d_276", "required":
+    true}, {"type": "double", "name": "d_277", "required": true}, {"type": "double",
+    "name": "d_278", "required": true}, {"type": "double", "name": "d_279", "required":
+    true}, {"type": "double", "name": "d_280", "required": true}, {"type": "double",
+    "name": "d_281", "required": true}, {"type": "double", "name": "d_282", "required":
+    true}, {"type": "double", "name": "d_283", "required": true}, {"type": "double",
+    "name": "d_284", "required": true}, {"type": "double", "name": "d_285", "required":
+    true}, {"type": "double", "name": "d_286", "required": true}, {"type": "double",
+    "name": "d_287", "required": true}, {"type": "double", "name": "d_288", "required":
+    true}, {"type": "double", "name": "d_289", "required": true}, {"type": "double",
+    "name": "d_290", "required": true}, {"type": "double", "name": "d_291", "required":
+    true}, {"type": "double", "name": "d_292", "required": true}, {"type": "double",
+    "name": "d_293", "required": true}, {"type": "double", "name": "d_294", "required":
+    true}, {"type": "double", "name": "d_295", "required": true}, {"type": "double",
+    "name": "d_296", "required": true}, {"type": "double", "name": "d_297", "required":
+    true}, {"type": "double", "name": "d_298", "required": true}, {"type": "double",
+    "name": "d_299", "required": true}, {"type": "double", "name": "d_300", "required":
+    true}, {"type": "double", "name": "d_301", "required": true}, {"type": "double",
+    "name": "d_302", "required": true}, {"type": "double", "name": "d_303", "required":
+    true}, {"type": "double", "name": "d_304", "required": true}, {"type": "double",
+    "name": "d_305", "required": true}, {"type": "double", "name": "d_306", "required":
+    true}, {"type": "double", "name": "d_307", "required": true}, {"type": "double",
+    "name": "d_308", "required": true}, {"type": "double", "name": "d_309", "required":
+    true}, {"type": "double", "name": "d_310", "required": true}, {"type": "double",
+    "name": "d_311", "required": true}, {"type": "double", "name": "d_312", "required":
+    true}, {"type": "double", "name": "d_313", "required": true}, {"type": "double",
+    "name": "d_314", "required": true}, {"type": "double", "name": "d_315", "required":
+    true}, {"type": "double", "name": "d_316", "required": true}, {"type": "double",
+    "name": "d_317", "required": true}, {"type": "double", "name": "d_318", "required":
+    true}, {"type": "double", "name": "d_319", "required": true}, {"type": "double",
+    "name": "d_320", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-03-17 16:12:11.680879'

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Priscila/workspace/apollo/mlruns/815447596395846916/f8d94502be2649f6a44324d04759d7f6/artifacts
+end_time: 1742227599094
+entry_point_name: ''
+experiment_id: '815447596395846916'
+lifecycle_stage: active
+run_id: f8d94502be2649f6a44324d04759d7f6
+run_name: unequaled-worm-562
+run_uuid: f8d94502be2649f6a44324d04759d7f6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742227588382
+status: 3
+tags: []
+user_id: Priscila

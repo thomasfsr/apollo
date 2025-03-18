@@ -43,6 +43,7 @@ class Model:
         for distance in distances:
             for k in n_neighbors:
                 knn = KNeighborsClassifier(n_neighbors=k, metric=distance)
+                knn.fit(X, y)
                 f1 = cross_val_score(knn, X, y, cv=10, scoring ='f1_macro')
                 topk = cross_val_score(knn, X, y, cv=10, scoring = top1_k_score)
                 auc = cross_val_score(knn, X, y, cv=10, scoring ='roc_auc_ovr_weighted')
@@ -63,6 +64,12 @@ class Model:
         top1_k_score = make_scorer(top_k_accuracy_score, response_method='predict_proba', k=1)
 
         mlflow.set_experiment("KNN_Hyperparameter_Tuning")
+        
+        best_model_uri = None
+        best_f1 = 0
+        best_model = None
+        knn = KNeighborsClassifier()
+        signature = mlflow.models.infer_signature(X, knn.fit(X, y).predict(X))
 
         for distance in distances:
             for k in n_neighbors:
@@ -83,7 +90,14 @@ class Model:
                     mlflow.log_metric("topk", topk_mean)
                     mlflow.log_metric("auc", auc_mean)
 
-                    mlflow.sklearn.log_model(knn, f"knn_distance_{distance}_k_{k}")
+                    model_uri = f"knn_distance_{distance}_k_{k}"
+
+                    mlflow.sklearn.log_model(knn, model_uri, signature=signature)
+
+                    if f1_mean > best_f1:
+                        best_f1 = f1_mean
+                        best_model = model_uri
+                        best_model_uri = f"runs:/{mlflow.active_run().info.run_id}/{best_model}"
 
                 results['distance'].append(distance)
                 results['k'].append(k)
@@ -92,6 +106,11 @@ class Model:
                 results['auc'].append(auc_mean)
 
         results_df = pd.DataFrame(results)
+
+        if best_model_uri:
+            print(f"Best model URI: {best_model}")
+            mlflow.register_model(best_model_uri, best_model)
+            mlflow.set_tag("best_model_uri", best_model_uri)
         return results_df
 
     def to_csv(self, result:pd.DataFrame):
@@ -104,7 +123,7 @@ class Model:
         pass
 
 if __name__ == '__main__':
-    model = Model('data/emb.csv', 'data/results.csv')
+    model = Model('data/df.csv', 'data/results.csv')
     df = model.load()
     df = model.preprocess(df)
     X_train, X_test, y_train, y_test = model.split(df)

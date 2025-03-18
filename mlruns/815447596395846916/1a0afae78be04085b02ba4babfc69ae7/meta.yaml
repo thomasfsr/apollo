@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Priscila/workspace/apollo/mlruns/815447596395846916/1a0afae78be04085b02ba4babfc69ae7/artifacts
+end_time: 1742227701660
+entry_point_name: ''
+experiment_id: '815447596395846916'
+lifecycle_stage: active
+run_id: 1a0afae78be04085b02ba4babfc69ae7
+run_name: big-kite-764
+run_uuid: 1a0afae78be04085b02ba4babfc69ae7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742227695377
+status: 3
+tags: []
+user_id: Priscila

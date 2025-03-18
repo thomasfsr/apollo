@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Priscila/workspace/apollo/mlruns/815447596395846916/7b619a0a15f348c3a187d34b74b908c7/artifacts
+end_time: 1742227830498
+entry_point_name: ''
+experiment_id: '815447596395846916'
+lifecycle_stage: active
+run_id: 7b619a0a15f348c3a187d34b74b908c7
+run_name: youthful-whale-477
+run_uuid: 7b619a0a15f348c3a187d34b74b908c7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742227809922
+status: 3
+tags: []
+user_id: Priscila

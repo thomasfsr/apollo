@@ -19,3 +19,6 @@ dependencies = [
 etl = "python -m src.etl"
 train = "python -m src.train_model"
 mlf = "mlflow ui"
+inf = "python -m src.inference"
+cluster = "python -m src.clustering"
+plot = "python -m streamlit run src/visualization/plot.py"

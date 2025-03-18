@@ -47,7 +47,7 @@ class ETL:
 
 if __name__ == '__main__':
     dim_emb = 320
-    etl = ETL('data/mini_gm_public_v0.1.p', 'data/emb.csv')
+    etl = ETL('data/mini_gm_public_v0.1.p', 'data/df.csv')
     data = etl.extract()
     df = etl.transform(data, dim_emb)
     etl.load(df)

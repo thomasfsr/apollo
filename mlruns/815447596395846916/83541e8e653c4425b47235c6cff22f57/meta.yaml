@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Priscila/workspace/apollo/mlruns/815447596395846916/83541e8e653c4425b47235c6cff22f57/artifacts
+end_time: 1742227759192
+entry_point_name: ''
+experiment_id: '815447596395846916'
+lifecycle_stage: active
+run_id: 83541e8e653c4425b47235c6cff22f57
+run_name: sincere-bat-506
+run_uuid: 83541e8e653c4425b47235c6cff22f57
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742227742886
+status: 3
+tags: []
+user_id: Priscila

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Priscila/workspace/apollo/mlruns/815447596395846916/3b779ee4df3a44fab1bc997780d54936/artifacts
+end_time: 1742227720081
+entry_point_name: ''
+experiment_id: '815447596395846916'
+lifecycle_stage: active
+run_id: 3b779ee4df3a44fab1bc997780d54936
+run_name: flawless-sponge-413
+run_uuid: 3b779ee4df3a44fab1bc997780d54936
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742227710468
+status: 3
+tags: []
+user_id: Priscila

@@ -1,6 +1,0 @@
-artifact_location: file:///C:/Users/Priscila/workspace/apollo/mlruns/316957149629071327
-creation_time: 1742186471777
-experiment_id: '316957149629071327'
-last_update_time: 1742186471777
-lifecycle_stage: active
-name: KNN_Hyperparameter_Tuning

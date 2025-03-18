@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Priscila/workspace/apollo/mlruns/815447596395846916/f25e5c02a872469ab96b8ddd74991b9d/artifacts
+end_time: 1742227640457
+entry_point_name: ''
+experiment_id: '815447596395846916'
+lifecycle_stage: active
+run_id: f25e5c02a872469ab96b8ddd74991b9d
+run_name: wistful-dove-332
+run_uuid: f25e5c02a872469ab96b8ddd74991b9d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742227634075
+status: 3
+tags: []
+user_id: Priscila

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Priscila/workspace/apollo/mlruns/815447596395846916/f33727b551824d679c0a93fca326052c/artifacts
+end_time: 1742227879276
+entry_point_name: ''
+experiment_id: '815447596395846916'
+lifecycle_stage: active
+run_id: f33727b551824d679c0a93fca326052c
+run_name: valuable-owl-384
+run_uuid: f33727b551824d679c0a93fca326052c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742227870105
+status: 3
+tags: []
+user_id: Priscila

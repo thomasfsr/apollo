@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Priscila/workspace/apollo/mlruns/815447596395846916/26d5948b05744b9d8cf72874e392033e/artifacts
+end_time: 1742227664169
+entry_point_name: ''
+experiment_id: '815447596395846916'
+lifecycle_stage: active
+run_id: 26d5948b05744b9d8cf72874e392033e
+run_name: handsome-fawn-876
+run_uuid: 26d5948b05744b9d8cf72874e392033e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742227654815
+status: 3
+tags: []
+user_id: Priscila

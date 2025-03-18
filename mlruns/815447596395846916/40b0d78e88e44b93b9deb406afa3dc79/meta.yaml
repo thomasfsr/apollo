@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Priscila/workspace/apollo/mlruns/815447596395846916/40b0d78e88e44b93b9deb406afa3dc79/artifacts
+end_time: 1742227689125
+entry_point_name: ''
+experiment_id: '815447596395846916'
+lifecycle_stage: active
+run_id: 40b0d78e88e44b93b9deb406afa3dc79
+run_name: suave-vole-156
+run_uuid: 40b0d78e88e44b93b9deb406afa3dc79
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742227682535
+status: 3
+tags: []
+user_id: Priscila

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Priscila/workspace/apollo/mlruns/815447596395846916/9f2135676588474fbd106a40cc7c1a84/artifacts
+end_time: 1742227870089
+entry_point_name: ''
+experiment_id: '815447596395846916'
+lifecycle_stage: active
+run_id: 9f2135676588474fbd106a40cc7c1a84
+run_name: wistful-moose-620
+run_uuid: 9f2135676588474fbd106a40cc7c1a84
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742227845364
+status: 3
+tags: []
+user_id: Priscila
