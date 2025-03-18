@@ -1,23 +1,18 @@
-import numpy as np
 import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.metrics import roc_curve, auc
-from sklearn.neighbors import KNeighborsClassifier
 from scipy.stats import shapiro
-from sklearn.manifold import TSNE
-from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
-from sklearn.datasets.
-from scipy import stats
+from sklearn.neighbors import KNeighborsClassifier as KNN
+from sklearn.metrics import roc_curve, auc
 
 test_df = pd.read_csv("data/test.csv")
 train_df = pd.read_csv("data/train.csv")
 infered_df = pd.read_csv("data/test_predictions.csv")
 df = pd.read_csv("data/df.csv")
 tsne_df = pd.read_csv('data/tsne_df.csv')
-pca_df = pd.read_csv('data/pca_df')
+results = pd.read_csv('data/results.csv')
 
 embeddings = [f"d_{i+1}" for i in range(320)]
 
@@ -99,76 +94,95 @@ st.subheader('K- Nearest Neighbors Classifier (KNN)')
 st.markdown("""To the task of predicting the syndrome using the embeded image there
             is a model
 """)
+st.markdown("""
+To optimize the KNN Classifier we can try out the combination of hyperparameters
+such as:  
+            - Metric of distance: Euclidean and Cosine.  
+            - Number of neighbors: 1 to 15.  
+The distance change how the magnitude and dimensionality of the data impacts the model.
+Euclidean distance are very sensitive to scale and high-dimensionality of the data.
+Cosine distance is more robust since it focus on the angle of the vectors.
+Moreover, there is another import hyperparameter for KNN model.  
+The number of neighbors is inversionally proportional to the overfitting
+of the model.  
+The smaller K number, more prone to high variance (overfit), leading the
+model to capture every noise in the data, memorizing the training data.  
+  
+Let us see the result of the different combinations.  
+""")
 
-# Train KNN model
-X, y = pca_df[:-1], pca_df['syndrome_id']
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
-knn = KNeighborsClassifier(n_neighbors=12, metric="cosine")
+st.dataframe(results)
+
+st.markdown(
+    '''
+    The best model was the k=13 and cosine distance, achieving:
+    Overall:
+    f1-score: 0.786, top 1-k accurancy: 0.805 and ROC AUC: 0.966.
+    As expected, the Cosine Distance and bigger K performed better.  
+    The model was trained with 80 percent of the data stratified by the
+    syndrome label to achieve higher accurancy with the small classes. 
+     The remaining data for final test will be used to validate the model
+     and to help us visualize the ROC curve for each syndrome.  
+    ''')
+
+encoded_y_train = pd.get_dummies(y_train)
+encoded_y_test = pd.get_dummies(y_test)
+
+syndrome_counts = y_test.value_counts().to_dict()
+
+knn = KNN(n_neighbors=13, metric="cosine")
 knn.fit(X_train, y_train)
 
-# # Get probability scores for each class
-# y_score = knn.predict_proba(X_test)
+# Get probability scores for each class
+y_score = knn.predict_proba(X_test)
 
+auc_values = []
+roc_curves = {}
 
-# auc_values = []
-# roc_curves = {}
+# Create figure
+fig, ax = plt.subplots(figsize=(10, 7), dpi=200)
 
-# # Create figure
-# fig, ax = plt.subplots(figsize=(10, 7), dpi=200)
+for i, label in enumerate(encoded_y_test.columns):
+    fpr, tpr, _ = roc_curve(encoded_y_test.iloc[:, i], y_score[:, i])
+    roc_auc = auc(fpr, tpr)
+    instance_count = syndrome_counts.get(label, 0)  # Get instance count
+    auc_values.append((roc_auc, label, instance_count, fpr, tpr))
 
-# for i, label in enumerate(encoded_y_test.columns):
-#     fpr, tpr, _ = roc_curve(encoded_y_test.iloc[:, i], y_score[:, i])
-#     roc_auc = auc(fpr, tpr)
-#     instance_count = syndrome_counts.get(label, 0)  # Get instance count
-#     auc_values.append((roc_auc, label, instance_count, fpr, tpr))
+# Sort by AUC descending
+auc_values.sort(reverse=True, key=lambda x: x[0])
 
-# # Sort by AUC descending
-# auc_values.sort(reverse=True, key=lambda x: x[0])
+# Generate colors
+palette = sns.color_palette("tab10", n_colors=len(auc_values))
+color_map = {label: color for (_, label, _, _, _), color in zip(auc_values, palette)}
 
-# # Generate colors
-# palette = sns.color_palette("tab10", n_colors=len(auc_values))
-# color_map = {label: color for (_, label, _, _, _), color in zip(auc_values, palette)}
+# Plot sorted ROC curves
+fig, ax = plt.subplots(figsize=(10, 7), dpi=200)
+for (roc_auc, label, instance_count, fpr, tpr) in auc_values:
+    ax.plot(fpr, tpr, label=f"Syndrome {label} (AUC = {roc_auc:.2f}, n={instance_count})", color=color_map[label])
 
-# # Plot sorted ROC curves
-# fig, ax = plt.subplots(figsize=(10, 7), dpi=200)
-# for (roc_auc, label, instance_count, fpr, tpr) in auc_values:
-#     ax.plot(fpr, tpr, label=f"Syndrome {label} (AUC = {roc_auc:.2f}, n={instance_count})", color=color_map[label])
+# Plot reference line
+ax.plot([0, 1], [0, 1], "k--", lw=2)
 
-# # Plot reference line
-# ax.plot([0, 1], [0, 1], "k--", lw=2)
+# Set labels and title
+ax.set_xlabel("False Positive Rate")
+ax.set_ylabel("True Positive Rate")
+ax.set_title("ROC AUC Curve for Each Syndrome")
+ax.legend(loc="lower right")
 
-# # Set labels and title
-# ax.set_xlabel("False Positive Rate")
-# ax.set_ylabel("True Positive Rate")
-# ax.set_title("ROC AUC Curve for Each Syndrome")
-# ax.legend(loc="lower right")
+# Display plot in Streamlit
+st.pyplot(fig)
 
-# # Display plot in Streamlit
-# st.pyplot(fig)
+# Create bar plot for AUC values with syndrome counts
+df_auc = pd.DataFrame(auc_values, columns=["AUC", "Syndrome", "Count", "FPR", "TPR"])
 
-# # Create bar plot for AUC values with syndrome counts
-# df_auc = pd.DataFrame(auc_values, columns=["AUC", "Syndrome", "Count", "FPR", "TPR"])
-
-# # Seaborn barplot
-# fig, ax = plt.subplots(figsize=(10, 5), dpi=200)
-# sns.barplot(
-#     data=df_auc,
-#     x="AUC",
-#     y="Syndrome",
-#     hue="Syndrome",
-#     palette=color_map,
-#     dodge=False,
-#     ax=ax
-# )
-
-# # Show counts inside bars
-# for i, (auc_value, label, count, _, _) in enumerate(auc_values):
-#     ax.text(auc_value + 0.01, i, f"n={count}", va="center", fontsize=10)
-
-# ax.set_xlabel("AUC Score")
-# ax.set_ylabel("Syndrome")
-# ax.set_title("AUC Scores Sorted with Instance Counts")
-# ax.legend_.remove()  # Remove duplicate legend
-
-# # Display bar plot in Streamlit
-# st.pyplot(fig)
+# Seaborn barplot
+fig, ax = plt.subplots(figsize=(10, 5), dpi=200)
+sns.barplot(
+    data=df_auc,
+    x="AUC",
+    y="Syndrome",
+    hue="Syndrome",
+    palette=color_map,
+    dodge=False,
+    ax=ax
+)
