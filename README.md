@@ -60,6 +60,7 @@ task plot
 This final command will run the streamlit app with
 the report of the project. This report has all the 
 visualization plots for Exploratory Data Analysis and futher analysis of the performance of the models.  
+To open the dashboard open the URI: localhost:8501
   
 ## Overview  
 This project focuses on analyzing medical image data to predict syndromes using embeddings extracted from a pre-trained CNN model. The workflow includes exploratory data analysis (EDA), normality checks, dimensionality reduction with T-SNE, and classification using a K-Nearest Neighbors (KNN) model. The goal is to validate the correlation between image embeddings and syndrome categories while addressing challenges like high-dimensional data and long-tailed distributions.  
