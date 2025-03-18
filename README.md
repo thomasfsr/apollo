@@ -1,6 +1,6 @@
 ## Installation 
 
-The package manager choosen for this project is UV for its simplicity and speed.  
+The package manager chosen for this project is UV for its simplicity and speed.  
 However, for standard installation there is also a requirements.txt file.  
   
 First step is to clone this repo:  
